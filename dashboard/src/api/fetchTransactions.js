@@ -2,8 +2,11 @@ import CryptoJS from 'crypto-js';
 import axios from "axios";
 
 // Define the API credentials
-const API_KEY = import.meta.env.VITE_API_KEY;
-const API_SECRET = import.meta.env.VITE_API_SECRET;
+// const API_KEY = import.meta.env.VITE_API_KEY;
+// const API_SECRET = import.meta.env.VITE_API_SECRET;
+
+const API_KEY = "key-test_493e9539-3765-493a-864d-1082e2636168";
+const API_SECRET = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcGlfa2V5Ijoia2V5LXRlc3RfNDkzZTk1MzktMzc2NS00OTNhLTg2NGQtMTA4MmUyNjM2MTY4Iiwic2VjcmV0IjoiMDUyOTNjMGU1MDlhOWE4ODRiMDVhMWYwZjkzYjdiNjMzMmE1NDUwMSJ9.is7GgbMLZ_ZUT1He9DG1dtEs5CxfpkVlCco0Xo6mHQY"
 
 // Define the base URL for the API
 const BASE_URL = "/api/en/transaction";

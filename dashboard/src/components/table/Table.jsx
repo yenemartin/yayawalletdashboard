@@ -7,7 +7,6 @@ import './table.css';
 
 const Table = ({transactions, userName}) => {
 
-  console.log('Transaction table: ', transactions);
   const renderRow = (transaction) => {  
 
     return (
