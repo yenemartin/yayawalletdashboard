@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 const Navbar = () => {
   
   return (
-    <AppBar position="sticky" sx={{ bgcolor: '#fff', mb: 2, minWidth: '100vw'}}>
+    <AppBar position="sticky" sx={{ bgcolor: '#fff', mb: 2,}}>
       <Toolbar>
         <Link to='/'>  
           <Typography

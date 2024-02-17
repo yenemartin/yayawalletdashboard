@@ -8,7 +8,7 @@ const API_SECRET = import.meta.env.VITE_API_SECRET;
 // Define the base URL for the API
 const BASE_URL = "/api/en/transaction";
 
-export const searchTransactions = async (inputData, setSearchData) => {
+export const searchTransactions = async (setSearchData, inputData) => {
     
     // Construct the URL for the find-by-user endpoint
     let url = `${BASE_URL}/search`;

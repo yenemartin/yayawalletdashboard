@@ -9,10 +9,10 @@ const API_SECRET = import.meta.env.VITE_API_SECRET;
 const BASE_URL = "/api/en/transaction";
 
 
-export const fetchTransactions = async () => {
+export const fetchTransactions = async (page) => {
     
     // Construct the URL for the find-by-user endpoint
-    let url = `${BASE_URL}/find-by-user?p=1`;
+    let url = `${BASE_URL}/find-by-user?p=${page}`;
  
     const timestamp = Date.now().toString(); // Get current timestamp in milliseconds
     const signature = signRequest(timestamp,'GET',`/api/en/transaction/find-by-user`,''); // Sign the request

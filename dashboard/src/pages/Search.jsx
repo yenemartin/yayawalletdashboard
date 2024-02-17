@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import TextField from '@mui/material/TextField'
 import { useState } from 'react';
 import { searchTransactions } from '../api/searchTransactions';
-import Table from '../components/Table';
+import Table from '../components/SearchTable';
 
 
 // eslint-disable-next-line react/prop-types
@@ -18,13 +18,14 @@ const Search = ({userName}) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    searchTransactions(inputData, setSearchData);
+    searchTransactions( setSearchData, inputData);
   }
 
+ 
 
   return (
-    <>
-      <Box mt={10} mb={5} sx={{ display: 'flex', justifyContent: 'center' }}>
+    <div>
+      <Box mt={5} mb={3} sx={{ display: 'flex', justifyContent: 'center' }}>
         <TextField
           id="outlined-size-small"
           placeholder="Search by sender account name, receiver account name, cause or ID"
@@ -38,7 +39,7 @@ const Search = ({userName}) => {
       <Box>
         {searchData.length !== 0 ? <Table transactions={searchData} userName={userName}/> : null}
       </Box>
-    </>
+    </div>
   )
 }
 
